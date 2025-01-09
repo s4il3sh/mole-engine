@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Results</title>
+</head>
+<body>
+    <h1>Calculation Results</h1>
+    <p>Results generated using <strong>mole-engine.py</strong></p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Compound</th>
+                <th>Molar Ratio</th>
+                <th>Molar Mass (g/mol)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+            <tr>
+                <td>{{ entry.compound }}</td>
+                <td>{{ entry.molar_ratio }}</td>
+                <td>{{ entry.molar_mass }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Back to Input</a>
+</body>
+</html>
